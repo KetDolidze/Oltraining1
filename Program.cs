@@ -1,4 +1,7 @@
-﻿class Training
+﻿using System.Runtime.Intrinsics.X86;
+using System.Transactions;
+
+class Training
 {
     static void Main(string[] argss)
     {
@@ -35,25 +38,22 @@
         Console.WriteLine("Your weight is: " + weight);
 
         Console.WriteLine();
-        /*დაწერეთ კოდი, რომელიც ითვლის ადამიანის BMI მოიძიეთ ფორმულა ინტერნეტში.
+        /* 3. დაწერეთ კოდი, რომელიც ითვლის ადამიანის BMI მოიძიეთ ფორმულა ინტერნეტში.
          * ლოგიკა და კოდი დამოუკიდებლად გაწერეთ
          */
-
-        Console.Write("Weight in kg: ");
-        int kg;
-        kg = Convert.ToInt32(Console.ReadLine());
-        Console.Write("Height in m: ");
-        int m;
-        m = Convert.ToInt32(Console.ReadLine());
-        int BMI;
-        BMI = kg / ((m / 100) * (m / 100));
-        Console.WriteLine("Your BMI is: " + BMI);
+        
+        Console.Write("Enter your weight in kg: ");
+        float kg = float.Parse(Console.ReadLine());
+        Console.Write("Enter yous height in cm: ");
+        int cm = Int32.Parse(Console.ReadLine());
+        float BMI = kg / ((cm / 100)*2);
+        Console.WriteLine("Your Bmi is: " + BMI);
 
 
+       
 
         /* 4
          */
-
         Console.WriteLine("   | | ");
         Console.WriteLine("  1|2|3");
         Console.WriteLine("   | | ");
