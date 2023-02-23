@@ -11,7 +11,7 @@ class Training
         int x = 4;
         int z = 5;
         int y = 10;
-        int sum = x + (5 * 10);
+        int sum = x + (y * z);
         Console.Write("The sum of x (4) +(y (5)*z (10)) equals to: " + sum);
 
         Console.WriteLine();
